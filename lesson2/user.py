@@ -36,13 +36,14 @@ class User:
     def is_admin(self):
         return self._is_admin
 
+
     @name.setter
     def name(self, value):
         self.__name = value
 
 
     def login(self, password):
-        return self.__password == password
+        print(self.__password == password)
 
     def logout(self):
         if self._is_logged_in:
