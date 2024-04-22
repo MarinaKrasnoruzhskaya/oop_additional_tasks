@@ -10,11 +10,17 @@ class Employee:
     def __init__(self, pay):
         self.pay = pay
 
+    def __add__(self, other):
+        return self.pay + other
+
 
 class Client:
 
     def __init__(self, pay):
         self.pay = pay
+
+    def __add__(self, other):
+        return self.pay + other
 
 
 class Developer(Employee):
@@ -29,7 +35,8 @@ users = [Employee(50000), Client(100000), Developer(50000), Manager(50000)]
 
 total_salary = 0
 for user in users:
-    total_salary = user + total_salary
+    if isinstance(user, Employee):
+        total_salary = user + total_salary
 
 print(total_salary)
 # Вывод: 150000

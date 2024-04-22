@@ -153,7 +153,7 @@ product_item = Product('Test', 'Test', 1000, 10)
 
 print(str(categories[0]) == 'Смартфоны, количество продуктов: 27 шт.')
 
-print( str(product_item) == 'Test, 1000 руб. Остаток: 10 шт.')
+print(str(product_item) == 'Test, 1000 руб. Остаток: 10 шт.')
 
 
 product_item_2 = Product('Test2', 'Test2', 500, 20)

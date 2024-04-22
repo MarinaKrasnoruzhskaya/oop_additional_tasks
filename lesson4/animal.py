@@ -14,8 +14,32 @@
 """
 
 
-class Aminal:
-    pass
+class Animal:
+    """класс Animal, представляющий животное"""
+    def __init__(self, name):
+        """конструктор, принимающий имя животного"""
+        self.name = name
+
+    @staticmethod
+    def speak():
+       """метод, который выводит звук, издаваемый животным"""
+       print("?")
+
+
+class Dog(Animal):
+    """класс Dog, наследующийся от класса Animal, представляющий собаку"""
+    @staticmethod
+    def speak():
+        """метод, который выводит звук, издаваемый собакой"""
+        print("Woof!")
+
+
+class Cat (Animal):
+    """класс Cat, наследующийся от класса Animal, представляющий кошку"""
+    @staticmethod
+    def speak():
+        """метод, который выводит звук, издаваемый кошкой"""
+        print("Meow!")
 
 
 # код для проверки 
