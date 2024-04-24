@@ -18,7 +18,43 @@
 
 
 class Person:
-    pass
+    """ класс Person, представляющий человека """
+    def __init__(self, name, age):
+        """ конструктор, принимающий имя человека и его возраст"""
+        self.name = name
+        self.age = age
+
+    def get_name(self):
+        """ метод, который возвращает имя человека"""
+        return self.name
+
+    def get_age(self):
+       """ Метод, который возвращает возраст человека"""
+       return self.age
+
+
+class Employee2(Person):
+    """ класс Employee2, наследующийся от класса Person"""
+    def __init__(self, name, age, salary):
+        """ конструктор, принимающий имя сотрудника, его возраст и зарплату"""
+        super().__init__(name, age)
+        self.salary = salary
+
+    def get_salary(self):
+        """ метод, который возвращает зарплату сотрудника"""
+        return self.salary
+
+
+class Manager2(Employee2):
+    """ класс Manager2, наследующийся от класса Employee2, представляющий менеджера"""
+    def __init__(self, name, age, salary, bonus):
+        """ конструктор, принимающий имя менеджера, его возраст, зарплату и бонус"""
+        super().__init__(name, age, salary)
+        self.bonus = bonus
+
+    def get_bonus(self):
+        """ метод, который возвращает бонус менеджера"""
+        return self.bonus
 
 
 # код для проверки 

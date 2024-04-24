@@ -13,15 +13,35 @@
 
 
 class Car:
-    pass
+    """ класс Car, представляющий машину"""
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def get_set_del(self):
+        self.brand = None
+        del self.year
+        self.year = None
 
 
 class CarSlots:
-    pass
+    __slots__ = ('brand', 'model', 'year')
+
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def get_set_del(self):
+        self.brand = None
+        del self.year
+        self.year = None
 
 
 car = Car('Toyota', 'Corolla', 2022)
 car_slots = Car('Toyota', 'Crown', 1990)
+
 
 import timeit
 
