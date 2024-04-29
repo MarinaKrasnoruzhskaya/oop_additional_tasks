@@ -7,10 +7,20 @@
 
 Важно в конструкторе обрабатывать исключения, если год больше текущего
 """
+from datetime import datetime
 
 
 class Car:
-    pass
+    """ класс Car, представляющий машину"""
+
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        if year <= datetime.now().year:
+            self.year = year
+        else:
+            raise Exception('Эта машина еще не была выпущена')
+
 
 
 # код для проверки

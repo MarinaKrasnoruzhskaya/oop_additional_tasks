@@ -12,8 +12,16 @@
 
 class Student:
 
-    def __init__(...):
-        ...
+    def __init__(self, name, course, estimates=None):
+        self.name = name
+        self.course = course
+        self.estimates = estimates if estimates else []
+
+    def avg_rate(self):
+        try:
+            print(round(sum([estimate for estimate in self.estimates]) / len(self.estimates), 2))
+        except ZeroDivisionError:
+            print(0.0)
 
 
 # код для проверки
