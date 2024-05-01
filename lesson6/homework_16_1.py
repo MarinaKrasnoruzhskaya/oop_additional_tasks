@@ -214,7 +214,7 @@ except ValueError as e:
 # True
 
 # 2
-print( categories[0].middle_price() == 140333.33333333334)
+print(categories[0].middle_price() == 140333.33333333334)
 
 #3
 null_category = Category('Test', 'Test', [])
